@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getPokemonsByName, getPokemons } from '../../store/slices/thunk';
 import style from './style.module.css';
 
@@ -7,8 +7,7 @@ const SearchBar = () => {
     const [name, setName] = useState('');
 
     const dispatch = useDispatch();
-/*     const pokemons = useSelector((state) => state.pokemon);
-    const isLoading = pokemons.status; */
+
     const submitFormHandler = () => {
         console.log(name)
         if(name === ''){

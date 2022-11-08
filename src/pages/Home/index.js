@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getPokemons } from '../../store/slices/thunk';
-import { Card, Navbar, SearchBar } from '../../components';
+import { SearchBar } from '../../components';
 import style from './style.module.css';
 import Modal from 'react-modal';
 import {
@@ -49,7 +49,7 @@ const Home = () => {
 
     useEffect(() => {
         dispatch(getPokemons());
-    }, []);
+    }, [dispatch]);
 
     useEffect(() => {
         if (!loadingFlavorText) {
@@ -121,7 +121,7 @@ const Home = () => {
                     ) : (
                         <>
                             <div>
-                                <img src={pokemon.sprites.front_default} alt="poke-image" />
+                                <img src={pokemon.sprites.front_default} alt={pokemon.name} />
                             </div>
                             <div>{`${pokemon.name[0].toUpperCase()}${pokemon.name.slice(
                                 1
