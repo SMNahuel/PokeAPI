@@ -1,0 +1,60 @@
+.container {
+    font-family: 'Roboto';
+}
+
+.card {
+    border: red 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.pokemonName {
+    font-family: 'Roboto';
+}
+
+.pagination {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prevButton {
+    width: 10;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-right: 30px solid #4e9bfc;
+    border-bottom: 20px solid transparent;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.nextButton {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 30px solid #4e9bfc;
+    border-bottom: 20px solid transparent;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
