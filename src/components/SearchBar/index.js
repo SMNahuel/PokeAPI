@@ -9,7 +9,6 @@ const SearchBar = () => {
     const dispatch = useDispatch();
 
     const submitFormHandler = () => {
-        console.log(name)
         if(name === ''){
             dispatch(getPokemons(name));
         }else{
@@ -34,4 +33,4 @@ const SearchBar = () => {
     )
 }
 
-export default SearchBar;
+export default React.memo(SearchBar);

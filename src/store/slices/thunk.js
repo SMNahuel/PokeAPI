@@ -1,5 +1,5 @@
 import axios from "axios";
-import { setError, setLoading, setPokemons } from "./pokemonSlice";
+import { setError, setLoading, setPokemons, setModal } from "./pokemonSlice";
 
 export const getPokemonsByName = (name) => {
     return async (dispatch, getState) => {
@@ -21,7 +21,6 @@ export const getPokemonsByName = (name) => {
 export const getPokemons = (page = 0) => {
     return async (dispatch, getState) => {
       dispatch(setLoading());
-  
       axios
         .get(`https://pokeapi.co/api/v2/pokemon?limit=12&offset=${page * 12}`)
         .then((res) => {
@@ -33,3 +32,9 @@ export const getPokemons = (page = 0) => {
         });
     };
   };
+
+export const openModal = () => {
+  return async (dispatch, getState) => {
+    dispatch(setModal());
+  };
+}
